@@ -1,10 +1,10 @@
-from QRTest import QRTest
+from QRCipher import QRCipher
 
 if __name__ == '__main__': 
 
-    user1 = QRTest('`?.F(fHbN6XK|j!t', 'user1')
+    user1 = QRCipher('`?.F(fHbN6XK|j!t', 'user1')
 
-    encrypted1 = user1.encrypt("anahtarlar nerde")
+    encrypted1 = user1.encrypt("I <3 Computer Science")
     print("Encrypted: " + encrypted1)
     decoded_qr = user1.decode_qr("encrypted_user1.png")
 
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     print("Decrypted_1: " + decrypted1)
 
 
-    user2 = QRTest('denemeHbN6XK|i!t', 'user2')
+    user2 = QRCipher('denemeHbN6XK|i!t', 'user2')
     user2.set_key('`?.F(fHbN6XK|j!t')
 
     decoded_qr2 = user2.decode_qr("encrypted_user1.png")
